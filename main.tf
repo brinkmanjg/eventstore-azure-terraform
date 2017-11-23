@@ -1,36 +1,57 @@
-variable "resource_name_prefix" {}
+variable "resource_name_prefix" {
+  description = "String that will be applied to all resource names and identifiers"
+}
 
-variable "subscription_id" {}
+variable "subscription_id" {
+  description = "Unique identifier of your Azure subscription"
+}
 
-variable "client_id" {}
+variable "client_id" {
+  description = "Service principal client ID"
+}
 
-variable "client_secret" {}
+variable "client_secret" {
+  description = "Service principal client secret"
+}
 
-variable "tenant_id" {}
+variable "tenant_id" {
+  description = "Unique identifier of the Azure Active Directory tenant for the service principal"
+}
 
-variable "location" {}
+variable "location" {
+  description = "Azure region name (e.g. eastus)"
+}
 
-variable "vmusername" {}
+variable "vmusername" {
+  description = "Virtual machine username"
+}
 
-variable "vmuserpassword" {}
+variable "vmuserpassword" {
+  description = "Virtual machine password"
+}
 
 variable "nodes" {
+  description = "The number of nodes to create"
   default = "3"
 }
 
 variable "vm_size" {
+  description = "Size of the virtual machines to be created"
   default = "Standard_D1_v2"
 }
 
 variable "storage_account_type" {
+  description = "Type of the storage account (e.g. Standard_LRS)"
   default = "Standard_LRS"
 }
 
 variable "lb_backend_pool_name" {
+  description = "Name of the load balancer back-end address pool"
   default = "backendPool1"
 }
 
 variable "lb_probe_name" {
+  description = "Name of the load balancer health probe"
   default = "tcpProbe"
 }
 
